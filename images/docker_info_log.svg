@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <filter id="boxShadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="700" rx="14" fill="#030712" />
+
+  <g transform="translate(20, 20)" filter="url(#boxShadow)">
+    <rect width="920" height="660" rx="10" fill="url(#termBg)" stroke="#374151" stroke-width="1.2"/>
+    
+    <rect width="920" height="38" rx="10" fill="#1f2937"/>
+    <rect y="28" width="920" height="10" fill="#1f2937"/>
+    
+    <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+    <circle cx="42" cy="19" r="6" fill="#f59e0b"/>
+    <circle cx="62" cy="19" r="6" fill="#10b981"/>
+    
+    <text x="460" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle" font-weight="600">terminal — bash — non-root docker info verification</text>
+
+    <g transform="translate(24, 58)" font-family="'Fira Code', 'JetBrains Mono', 'Courier New', monospace" font-size="11.8">
+      <!-- Command 1: docker version -->
+      <text y="15" fill="#10b981" font-weight="bold">devops-user@ubuntu-server:~$ <tspan fill="#f3f4f6">docker version</tspan></text>
+      <text y="33" fill="#93c5fd">Client: Docker Engine - Community</text>
+      <text y="50" fill="#cbd5e1"> Version:           26.0.0</text>
+      <text y="67" fill="#cbd5e1"> API version:       1.45</text>
+      <text y="84" fill="#cbd5e1"> Go version:        go1.21.8</text>
+      <text y="101" fill="#cbd5e1"> OS/Arch:           linux/amd64</text>
+      <text y="118" fill="#93c5fd">Server: Docker Engine - Community</text>
+      <text y="135" fill="#fef08a" font-weight="bold"> Engine: Version: 26.0.0, API: 1.45</text>
+      <text y="152" fill="#cbd5e1"> containerd Version: 1.6.28</text>
+      <text y="169" fill="#cbd5e1"> runc Version:       1.1.12</text>
+
+      <!-- Command 2: docker info -->
+      <text y="195" fill="#10b981" font-weight="bold">devops-user@ubuntu-server:~$ <tspan fill="#f3f4f6">docker info</tspan></text>
+      <text y="213" fill="#cbd5e1">Client: Docker Engine - Community</text>
+      <text y="230" fill="#fef08a" font-weight="bold">Containers: 3</text>
+      <text y="247" fill="#34d399">  Running: 1</text>
+      <text y="264" fill="#cbd5e1">  Paused: 0</text>
+      <text y="281" fill="#cbd5e1">  Stopped: 2</text>
+      <text y="298" fill="#fef08a" font-weight="bold">Images: 5</text>
+      <text y="315" fill="#cbd5e1">Server Version: 26.0.0</text>
+      <text y="332" fill="#cbd5e1">Storage Driver: overlay2</text>
+      <text y="349" fill="#cbd5e1">  Backing Filesystem: extfs</text>
+      <text y="366" fill="#cbd5e1">Logging Driver: json-file</text>
+      <text y="383" fill="#fef08a" font-weight="bold">Cgroup Driver: systemd</text>
+      <text y="400" fill="#fef08a" font-weight="bold">Cgroup Version: 2</text>
+      <text y="417" fill="#cbd5e1">Plugins: Volume: local, Network: bridge host ipvlan macvlan null overlay</text>
+      <text y="434" fill="#cbd5e1">Security Options: apparmor seccomp cgroupns</text>
+      <text y="451" fill="#cbd5e1">Operating System: Ubuntu 24.04 LTS</text>
+      <text y="468" fill="#cbd5e1">Kernel Version: 6.8.0-31-generic</text>
+      <text y="485" fill="#cbd5e1">Architecture: x86_64</text>
+      <text y="502" fill="#cbd5e1">CPUs: 4</text>
+      <text y="519" fill="#cbd5e1">Total Memory: 7.746GiB</text>
+
+      <!-- Command 3: grep cgroup -->
+      <text y="545" fill="#10b981" font-weight="bold">devops-user@ubuntu-server:~$ <tspan fill="#f3f4f6">docker info | grep -i cgroup</tspan></text>
+      <text y="563" fill="#38bdf8"> Cgroup Driver: systemd</text>
+      <text y="580" fill="#38bdf8"> Cgroup Version: 2</text>
+
+      <!-- Status banner -->
+      <text y="612" fill="#10b981" font-weight="bold">devops-user@ubuntu-server:~$ <tspan fill="#6ee7b7">echo Xac thuc thanh cong khong can sudo</tspan></text>
+      <text y="630" fill="#9ca3af">Xac thuc thanh cong khong can sudo</text>
+    </g>
+  </g>
+</svg>
